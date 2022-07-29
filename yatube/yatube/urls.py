@@ -19,7 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # импорт правил из приложения posts
-        path('', include('posts.urls', namespace='posts')),
-        path('admin/', admin.site.urls),
-        path('group/<slug:slug>/', include('posts.urls', namespace='posts')),
-    ]
+    path('', include('posts.urls', namespace='posts')),
+    path('admin/', admin.site.urls),
+    path('group/<slug:slug>/', include('posts.urls', namespace='posts')),
+]
