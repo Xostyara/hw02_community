@@ -23,3 +23,5 @@ class Post(models.Model):
         blank=True,
         null=True,
         on_delete=models.CASCADE)
+        
+        
