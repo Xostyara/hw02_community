@@ -1,3 +1,27 @@
-# backend_community_homework
+### yatube_project
+Социальная сеть блогеров
 
-[![CI](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml)
+### Описание
+Благодаря этому проекту я научусь разрабатывать на Django!
+
+### Технологии
+Python 3.7
+Django 2.2.19
+
+### Запуск проекта в dev-режиме
+- Установите и активируйте виртуальное окружение
+- установить виртуальное окружение
+python -m venv venv
+
+- запуск виртуального окружения
+source venv/Scripts/Activate
+- Установите зависимости из файла requirements.txt
+```
+pip install -r requirements.txt
+``` 
+- В папке с файлом manage.py выполните команду:
+```
+python3 manage.py runserver
+```
+### Авторы
+Команда Яндекс Практикум и Хостяра
