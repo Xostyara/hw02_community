@@ -1,5 +1,3 @@
-from tokenize import group
-from turtle import title
 from django.db import models
 from django.contrib.auth import get_user_model
 # Обращение к пользовалям делается через метод в соответствии с документацией
@@ -12,6 +10,7 @@ class Group(models.Model):
     slug = models.SlugField(unique = True)
     description = models.TextField()
 
+
 class Post(models.Model):
     text = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
@@ -19,4 +18,8 @@ class Post(models.Model):
         User, 
         on_delete=models.CASCADE,
         related_name='posts')
-    group = models.ForeignKey(Group, blank=True, null=True, on_delete=models.CASCADE)
+    group = models.ForeignKey(
+        Group, 
+        blank=True, 
+        null=True, 
+        on_delete=models.CASCADE)
