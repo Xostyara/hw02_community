@@ -27,7 +27,7 @@ def group_posts(request, slug):
     # Это аналог добавления
     # условия WHERE group_id = {group_id}
     # posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
-    posts = group.posts.all()[:10] 
+    posts = group.posts.all()[:10]
     context = {
         'group': group,
         'posts': posts,
