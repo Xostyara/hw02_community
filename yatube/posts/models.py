@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+
 # Обращение к пользовалям делается через метод в соответствии с документацией
 User = get_user_model()
 # Create your models here.

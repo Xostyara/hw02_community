@@ -13,7 +13,7 @@
       <main>
         {% block content %}
         
-        {% for post in posts %}
+        {% for post in page_obj %}
           <ul>
             <li>
               Автор: {{ post.author.get_full_name }}
@@ -26,6 +26,8 @@
           <a href="">все записи группы</a>
           {% if not forloop.last %}<hr>{% endif %}
           {% endfor %} 
+
+        {% include 'posts/includes/paginator.html' %}
         {% endblock %}
       </main>
       <footer>

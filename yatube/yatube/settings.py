@@ -33,15 +33,16 @@ LOGIN_REDIRECT_URL = 'posts:index'
 # Application definition
 
 INSTALLED_APPS = [
-    'posts.apps.PostsConfig',
-    'core.apps.CoreConfig',
-    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'posts.apps.PostsConfig',
+    'users.apps.UsersConfig',
+    'core.apps.CoreConfig',
+    'about.apps.AboutConfig',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Добавлен контекст-процессор
+                'core.context_processors.year.year',
             ],
         },
     },
